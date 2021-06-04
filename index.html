@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <title>Multi Step Form 2</title>
+</head>
+<body>
+  <div class="container">
+    <div class="inner">
+      <header>
+        <h2>Proposal Generator</h2>
+        <p>Fill all form field to generate a mortgage proposal.</p>
+      </header>
+      <ul class="progress-step">
+        <li class="step">
+          <p>Personal</p>
+          <div class="bar ">
+            <div class="circle">
+              <span class="step-num">1</span>
+              <span class="fas fa-check check"></span>
+            </div>
+            <div class="extention" id=""></div>
+          </div>
+        </li>
+        <li class="step">
+          <p>Property</p>
+          <div class="bar">
+            <div class="circle">
+              <span class="step-num">2</span>
+              <span class="fas fa-check check"></span>
+            </div>
+            <div class="extention"></div>
+          </div>
+        </li>
+        <li class="step">
+          <p>Company</p>
+          <div class="bar">
+            <div class="circle">
+              <span class="step-num">3</span>
+              <span class="fas fa-check check"></span>
+            </div>
+            <div class="extention"></div>
+          </div>
+        </li>
+      </ul>
+      <form class="slide-mode">
+        <fieldset class="slide default-slide form-1">
+          <div class="slide-card">
+            <h3 class="preview-heading">Please Review your response to this form</h3>
+            <legend>Personal Information</legend>
+            <div class="form-field">
+              <label for="name">name</label>
+              <input type="text" name="name" id="name" class="field">
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" id="email" class="field">
+            </div>
+            <div class="form-field">
+              <label for="mobile">Mobile No.</label>
+              <input type="tel" name="mobile" id="mobile" class="field">
+            </div>
+            <div class="form-field">
+              <label for="nationality">nationality</label>
+              <select name="nationality" id="nationality" class="field">
+                <option value="">
+                  Select your nationality
+                </option>
+                <option value="UAE">
+                  UAE National
+                </option>
+                <option value="expatriate">
+                  Expatriate
+                </option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="occupation">occupation</label>
+              <input type="text" name="occupation" id="occupation">
+            </div>
+            <div class="radio-field radio-field-2">
+              <p>What is your work status, salaried or self employed?
+              </p>
+              <div>
+                <input type="radio" name="work-status" value='salaried' id="salaried">
+                <label for="salaried">salaried</label>
+                <input type="radio" name="work-status" value="self employed" id="self-employed"> <label
+                  for="self-employed">self employed</label>
+              </div>
+            </div>
+          </div>
+          <div class="buttons-1">
+            <button class="next next-1">next</button>
+          </div>
+        </fieldset>
+        <fieldset class="slide form-2">
+          <div class="slide-card">
+            <legend>Property Information</legend>
+            <div class="radio-field">
+              <p>Is this the first or second time of buying a propertity with us?
+              </p>
+              <div>
+                <input type="radio" name="property-times" value='first' id="first">
+                <label for="first">First</label>
+                <input type="radio" name="property-times" value="second" id="second"> <label for="second">second</label>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="property-location"> Looking for property in which emirates</label>
+              <select name="propertity-name" id="propertity-name" class="field">
+                <option value="">
+                  ---select propertity location---
+                </option>
+                <option value="Dubai">
+                  Dubai
+                </option>
+                <option value="Abu Dhabi">
+                  Abu Dhabi
+                </option>
+                <option value="Ras Al Khaimah">
+                  Ras Al Khaimah
+                </option>
+                <option value="Sharjah">
+                  Sharjah
+                </option>
+                <option value="Ajman">
+                  Ajman
+                </option>
+                <option value="Al Ain">
+                  Al Ain
+                </option>
+                <option value="Fujairah">
+                  Fujairah
+                </option>
+                <option value="YUmm Al Quwain">
+                  Umm Al Quwain
+                </option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="property-value">Property Value (in AED)</label>
+              <input type="number" name="property-value" id="property-value" class="field">
+            </div>
+            <div class="form-field">
+              <label for="finance-required">Finance required (in AED)</label>
+              <input type="number" name="finance-required" id="finance-required" class="field">
+            </div>
+            <div class="form-field active">
+              <p class="">Cash in hand (i.e calculate and tell cash needed) is <span>_ _</span></p>
+            </div>
+            <div class="radio-field">
+              <p>Looking for extra finance? (Only available in Dubai properties as of now)
+              </p>
+              <div>
+                <input type="radio" name="extra-finance" value='yes' id="extra-finance-yes">
+                <label for="extra-finance-yes">Yes</label>
+                <input type="radio" name="extra-finance" value="no" id="extra-finance-no"> <label
+                  for="extra-finance-no">No</label>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="prev prev-2">previous</button>
+            <button class="next next-2">next</button>
+          </div>
+        </fieldset>
+        <fieldset class="slide form-3">
+          <div class="slide-card">
+            <legend>Company Information</legend>
+            <div class="form-field">
+              <label for="company-name">company name</label>
+              <input type="text" name="company-name" id="company-name" class="field">
+            </div>
+            <div class="form-field">
+              <label for="monthly-income">Salary as per salary certificate or Business Profit approximately in a
+                month</label>
+              <input type="number" name="monthly-income" id="monthly-income" class="field w-5">
+            </div>
+          </div>
+          <div class="buttons buttons-3">
+            <button class="prev prev-3">previous</button>
+            <button class="return-to-edit" id="return-to-edit">edit</button>
+            <button class="next submit" id="submit">review</button>
+            <button class="confirm-submit" id="confirm-submit">submit</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>

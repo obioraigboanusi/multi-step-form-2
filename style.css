@@ -1,0 +1,320 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: radial-gradient(#006fb8, rgb(28, 77, 223));
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  line-height: 1.2;
+  color: #006fb8;
+  font-weight: bolder;
+}
+
+button {
+  cursor: pointer;
+  transition: transform .05s ease-in;
+  padding: .5rem 1rem;
+  min-width: 100px;
+  text-transform: capitalize;
+  background-color: #006fb8;
+  border: none;
+  align-self: center;
+  color: white;
+  font-size: 1rem;
+  /* margin-bottom: 1rem; */
+}
+
+button:active {
+  transform: scale(1.2);
+}
+
+.container {
+  background-color: #fff;
+  width: 96%;
+  max-width: 700px;
+  margin: 3rem auto;
+}
+
+.container .inner {
+  margin: auto;
+  text-align: center;
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 0 1rem;
+}
+
+.progress-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  user-select: none;
+}
+
+.progress-step .step {
+  width: 25%;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  align-items: center;
+}
+
+.progress-step .step>p {
+  font-size: .8rem;
+  margin: 1rem auto 0;
+  font-weight: bold;
+}
+
+.progress-step .step.active p {
+  color: #006fb8;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.progress-step .bar .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: lightgray;
+  color: white;
+  padding: 2px;
+}
+
+.progress-step .step.active .circle {
+  background-color: #006fb8;
+  border-color: #006fb8;
+  color: white;
+}
+
+.progress-step .circle>span {
+  z-index: 1;
+}
+
+.progress-step .step.active .circle>span.step-num {
+  display: none;
+}
+
+.progress-step .step .circle>span.check {
+  display: none;
+}
+
+.progress-step .step.active .circle>span.check {
+  display: inline;
+}
+
+.progress-step .step .bar .extention {
+  height: 4px;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  background-color: lightgray;
+}
+
+.progress-step .step.active .extention {
+  background-color: #006fb8;
+}
+
+/* form styles */
+
+form {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+from.preview-mode>fieldset {
+  display: block !important;
+}
+
+.slide {
+  border: none;
+  align-self: flex-start;
+}
+
+.slide-mode .slide:not(:first-of-type) {
+  display: none;
+}
+
+.next:hover, .prev:hover {
+  outline: 2px solid rgb(2, 111, 221);
+  outline-offset: 2px;
+  background-color: rgb(2, 111, 221);
+}
+
+div.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.buttons-1 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.buttons-1 button {
+  margin-bottom: 0;
+  margin-right: 2rem;
+}
+
+.prev:hover, .return-to-edit:hover {
+  background-color: black;
+  outline: 2px solid black;
+  outline-offset: 2px;
+}
+
+.prev, .return-to-edit {
+  background-color: grey;
+}
+
+.slide h3, legend {
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+form label {
+  text-transform: capitalize;
+  text-align: left;
+}
+
+.form-field input:not(input[type='radio']), select {
+  padding: .1rem .5rem .3rem .5rem;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 2px;
+  width: 100% !important;
+  color: #2c3e50;
+  display: block !important;
+}
+
+.form-field input:not(input[type='radio']):focus, select:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: none;
+  font-weight: bold;
+  border-bottom: 2px solid #006fb8;
+  outline: 1px solid #006fb8;
+  letter-spacing: 2px;
+}
+
+option {
+  text-transform: capitalize;
+}
+
+label {
+  width: 100% !important;
+}
+
+.form-field label, .form-field p, .radio-field p, .radio-field label {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.radio-field, .form-field {
+  margin-bottom: .8rem;
+}
+
+.radio-field p {
+  margin-bottom: .5rem;
+}
+
+.radio-field>div {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.radio-field>div label:first-of-type {
+  margin-right: 2rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100% !important;
+}
+
+.form-3 .add-new {
+  margin-top: .5rem;
+}
+
+.form-3 .add-new:first-of-type {
+  margin-bottom: .5rem;
+}
+.slide-mode .confirm-submit, .slide-mode .return-to-edit, .slide-mode .preview-heading {
+  display: none;
+}
+
+.preview-mode .confirm-submit, .preview-mode .return-to-edit, .preview-mode .preview-heading {
+  display: block;
+}
+
+.preview-mode .prev-5, .preview-mode .submit, .preview-mode button.add-new, .preview-mode button.prev, .preview-mode button.next, .preview-mode fieldset legend {
+  display: none;
+}
+
+.preview-mode fieldset input, .preview-mode fieldset .form-field select, input[type=radio] {
+  pointer-events: none !important;
+}
+
+.slide-card {
+  padding: 1.5rem 2rem;
+  margin: 0 3% 20px 3%;
+  width: 94%;
+  box-shadow: 0 2px 2px 2px rgb(0 0 0 / 20%);
+}
+
+.form-field ol, .list {
+  margin-left: 1rem !important;
+  font-size: 14px !important;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-field ol, .list {
+  list-style: none;
+}
+
+.form-field ol>li, .list>li {
+  margin: 5px;
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: rgb(229, 239, 250);
+}
+
+.form-field ol>li>ul {
+  margin-left: 1rem;
+}
